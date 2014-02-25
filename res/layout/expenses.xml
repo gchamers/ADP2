@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/nav_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/nav_buttons" />
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/nav_buttons"
+        android:text="@string/create_new" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/create_btn"
+        android:layout_alignBottom="@+id/create_btn"
+        android:layout_toRightOf="@+id/create_btn"
+        android:text="@string/delete" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/create_btn"
+        android:text="@string/save" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/save_btn"
+        android:layout_alignBottom="@+id/save_btn"
+        android:layout_alignRight="@+id/delete_btn"
+        android:text="@string/cancel" />
+
+    <ScrollView
+        android:id="@+id/new_input_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/save_btn"
+        android:layout_marginLeft="18dp" >
+
+        <GridLayout
+            android:id="@+id/new_input_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_row ="0"
+                android:text="@string/name" />
+            
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:hint="@string/suggested_name" />
+            
+             <TextView
+                android:id="@+id/amount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_row ="1"
+                android:text="@string/amount" />
+             
+             <EditText
+                android:id="@+id/amount_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:hint="@string/suggested_amount" />
+             
+              <TextView
+                android:id="@+id/growth_rate_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_row ="2"
+                android:text="@string/growth_rate" />
+              
+            <EditText
+                android:id="@+id/growth_rate_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:hint="@string/suggested_growth_rate" />              
+              
+            <TextView
+                android:id="@+id/begin_year_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_row ="3"
+                android:text="@string/begin_year" />
+            
+            <EditText
+                android:id="@+id/begin_year_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:hint="@string/suggested_begin_year" />            
+            
+             <TextView
+                android:id="@+id/end_year_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_row ="4"
+                android:text="@string/end_year" />    
+                
+            <EditText
+                android:id="@+id/end_year_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:hint="@string/suggested_end_year" />             
+            
+        </GridLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
